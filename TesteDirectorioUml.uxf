@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>20</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>TesteDirectorio
+--
+
+--
++static main(String[arg]):void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>190</y>
+      <w>330</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Directorio
+--
+-Cliente cliente;
+-String telefono;
+-TreeMap&lt;String,Cliente&gt;directorio;
+--
++getDirectorio:TreeMap&lt;String,Cliente&gt;
++setDirectorio(TreeMap&lt;String,Cliente&gt;):void
++agregarCliente(tel:String,cliente:Cliente):boolean
++buscarCliente(telefono String):Cliente
++buscarTelefono(apellido:String):ArrayList&lt;String&gt;
++buscarCliente(ciudad:String):ArrayList&lt;Cliente&gt;
++borrarCliente(dni:long):TreeMap&lt;String,Cliente&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>190</y>
+      <w>320</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-dni:long
+-nombre:String
+-apellido:String
+-ciudad:String
+-direccion:String
+--
++Cliente(dni:long,nombre:String,apellido:String,
+ciudad:String,direccion:String)
++getDni():long
++getNombre():String
++getApellido():String
++getCiudad():String
++getDireccion():String
+
++setDni(dni):void
++setNombre(nombre):void
++setApellido(apellido):void
++setCiudad(ciudad):void
++setDireccion(direccion):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>280</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>80</y>
+      <w>130</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>80</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>140.0;110.0;140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
